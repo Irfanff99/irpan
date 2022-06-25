@@ -167,7 +167,7 @@ if (typeof settings !== 'object') global.db.data.settings[botNumber] = {}
 if (settings) {
 if (!('available' in settings)) settings.available = false
 if (!('composing' in settings)) settings.composing = false
-if (!('recording' in settings)) settings.recording = false
+if (!('recording' in settings)) settings.recording = true
 if (!('autorespond' in settings)) settings.autorespond = false
 } else global.db.data.settings[botNumber] = {
 available: false,
@@ -239,7 +239,7 @@ user.afkReason = ''
             }
         }
         
-*/if(autorecording){
+if(autorecording){
 	if(autorecording== true) return
 	await alpha.sendPresenceUpdate('recording', m.chat)
 	} else if(autoketik){
@@ -248,7 +248,7 @@ user.afkReason = ''
 		} else if(available){
 			if(available == true) return
 			alpha.sendPresenceUpdate('available', m.chat)
-			}*/
+			}
 
 
  //FUN
